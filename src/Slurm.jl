@@ -1,5 +1,6 @@
 module Slurm
 
-greet() = print("Hello World!")
+include("CommandDirectives.jl")
+include("SBATCH.jl")
 
 end # module
