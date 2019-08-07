@@ -14,6 +14,7 @@ module SBATCH
 using Slurm.CommandDirectives
 
 export sbatch,
+    prefix,
     ARRAY,
     ACCOUNT,
     COMMENT,
@@ -47,6 +48,8 @@ struct sbatch{A <: AbstractVector{<: Directive}, B <: AbstractString}
     directives::A
     script::B
 end
+
+prefix(::sbatch) = "SBATCH"
 
 ARRAY(v) = Directive("array", 'a', v)
 ACCOUNT(v) = Directive("account", 'A', v)
