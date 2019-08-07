@@ -13,7 +13,8 @@ module SBATCH
 
 using Slurm.CommandDirectives
 
-export ARRAY,
+export sbatch,
+    ARRAY,
     ACCOUNT,
     COMMENT,
     CPUS_PER_GPU,
@@ -41,6 +42,11 @@ export ARRAY,
     VERBOSE,
     WAIT,
     EXCLUDE
+
+struct sbatch{A <: AbstractVector{<: Directive}, B <: AbstractString}
+    directives::A
+    script::B
+end
 
 ARRAY(v) = Directive("array", 'a', v)
 ACCOUNT(v) = Directive("account", 'A', v)
