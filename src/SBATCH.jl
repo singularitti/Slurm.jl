@@ -11,7 +11,7 @@ julia>
 """
 module SBATCH
 
-using Slurm.CommandDirectives
+using Slurm.Directives
 
 export sbatch,
     prefix,

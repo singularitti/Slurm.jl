@@ -1,5 +1,5 @@
 """
-# module CommandDirectives
+# module Directives
 
 
 
@@ -9,7 +9,7 @@
 julia>
 ```
 """
-module CommandDirectives
+module Directives
 
 using Parameters
 
