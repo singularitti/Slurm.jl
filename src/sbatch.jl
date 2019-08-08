@@ -1,19 +1,6 @@
-"""
-# module SBATCH
-
-
-
-# Examples
-
-```jldoctest
-julia>
-```
-"""
-module SBATCH
-
 using Slurm.Directives
 
-export sbatch,
+export Sbatch,
     prefix,
     ARRAY,
     ACCOUNT,
@@ -44,12 +31,12 @@ export sbatch,
     WAIT,
     EXCLUDE
 
-struct sbatch{A <: AbstractVector{<: Directive}, B <: AbstractString}
+struct Sbatch{A <: AbstractVector{<: Directive}, B <: AbstractString}
     directives::A
     script::B
 end
 
-prefix(::sbatch) = "SBATCH"
+prefix(::Sbatch) = "SBATCH"
 
 ARRAY(v) = Directive("array", 'a', v)
 ACCOUNT(v) = Directive("account", 'A', v)
@@ -79,5 +66,3 @@ VERSION(v) = Directive("version", 'V', v)
 VERBOSE(v) = Directive("verbose", 'v', v)
 WAIT(v) = Directive("wait", 'W', v)
 EXCLUDE(v) = Directive("exclude", 'x', v)
-
-end
