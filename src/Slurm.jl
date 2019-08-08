@@ -1,5 +1,9 @@
 module Slurm
 
-greet() = print("Hello World!")
+include("Directives.jl")
+include("Commands.jl")
+include("SystemModules.jl")
+include("Shells.jl")
+include("Scriptify.jl")
 
 end # module

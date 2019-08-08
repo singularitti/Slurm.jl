@@ -7,3 +7,5 @@
 [![Codecov](https://codecov.io/gh/singularitti/Slurm.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/singularitti/Slurm.jl)
 [![Coveralls](https://coveralls.io/repos/github/singularitti/Slurm.jl/badge.svg?branch=master)](https://coveralls.io/github/singularitti/Slurm.jl?branch=master)
 [![Build Status](https://api.cirrus-ci.com/github/singularitti/Slurm.jl.svg)](https://cirrus-ci.com/github/singularitti/Slurm.jl)
+
+A package to generate [Slurm Workload Manager](https://slurm.schedmd.com/documentation.html) input files.
