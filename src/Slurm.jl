@@ -1,7 +1,7 @@
 module Slurm
 
 include("Directives.jl")
-include("SBATCH.jl")
+include("Commands.jl")
 include("SystemModules.jl")
 include("Shells.jl")
 include("Scriptify.jl")
